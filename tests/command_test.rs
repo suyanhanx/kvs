@@ -1,9 +1,9 @@
 #[cfg(test)]
 mod command_test {
-    use kvs::KvStore;
-    use std::process::Command;
     use assert_cmd::prelude::*;
+    use kvs::KvStore;
     use predicates::str::contains;
+    use std::process::Command;
 
     #[test]
     fn cli_no_args() {

@@ -1,4 +1,4 @@
-use clap::{ App, AppSettings, Arg, Command };
+use clap::{App, AppSettings, Arg, Command};
 use std::process::exit;
 
 fn main() {
@@ -15,18 +15,18 @@ fn main() {
                 .arg(
                     Arg::new("VALUE")
                         .help("The string value of the key")
-                        .required(true)
-                )
+                        .required(true),
+                ),
         )
         .subcommand(
             Command::new("get")
                 .about("Get the string value of a given string key")
-                .arg(Arg::new("KEY").help("A string key").required(true))
+                .arg(Arg::new("KEY").help("A string key").required(true)),
         )
         .subcommand(
             Command::new("rm")
                 .about("Remove a given key")
-                .arg(Arg::new("Key").help("A string key").required(true))
+                .arg(Arg::new("Key").help("A string key").required(true)),
         )
         .get_matches();
     match matches.subcommand() {

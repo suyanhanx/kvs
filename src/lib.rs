@@ -16,7 +16,7 @@ use std::collections::hash_map::HashMap;
 /// ```
 #[derive(Default)]
 pub struct KvStore {
-    kv_pairs: HashMap<String, String>
+    kv_pairs: HashMap<String, String>,
 }
 
 impl KvStore {
@@ -31,7 +31,7 @@ impl KvStore {
 
     pub fn new() -> Self {
         KvStore {
-            kv_pairs: HashMap::new()
+            kv_pairs: HashMap::new(),
         }
     }
 
@@ -47,4 +47,3 @@ impl KvStore {
         self.kv_pairs.remove(&_key);
     }
 }
-
